@@ -1,11 +1,87 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+# DONE: insert the docker build command
+docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+# DONE: insert the docker run command
+docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+# DONE: insert the docker logs command
+docker logs 56e416374fcbc8994c24390e59ba82e6bd5bbdceb61223a84fae3a2c27fa8836
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+# DONE: paste logs from the Docker container 
+
+$ docker logs 56e416374fcbc8994c24390e59ba82e6bd5bbdceb61223a84fae3a2c27fa8836
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug:225:11/01/2022, 16:51:00,  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug:225:11/01/2022, 16:51:00,  * Running on http://172.17.0.3:3111/ (Press CTRL+C to quit)
+INFO:app:49:11/01/2022, 16:52:31, SELECT * FROM posts
+DEBUG:app:51:11/01/2022, 16:52:31, Articles "2020 CNCF Annual Report,KubeCon + CloudNativeCon 2021,Kubernetes v1.20 Release Notes,CNCF Cloud Native Interactive Landscape,CNCF Cloud Native Definition v1.0,Kubernetes Certification" fetched from database!
+DEBUG:app:58:11/01/2022, 16:52:31, index function - SQLite DB connection is closed
+INFO:werkzeug:225:11/01/2022, 16:52:31, 172.17.0.1 - - [01/Nov/2022 16:52:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 16:52:31, 172.17.0.1 - - [01/Nov/2022 16:52:31] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 16:52:31, 172.17.0.1 - - [01/Nov/2022 16:52:31] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:33:11/01/2022, 16:52:37, SELECT * FROM posts WHERE id = 1
+DEBUG:app:41:11/01/2022, 16:52:37, get_post function - SQLite DB connection is closed
+INFO:app:72:11/01/2022, 16:52:37, Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:225:11/01/2022, 16:52:37, 172.17.0.1 - - [01/Nov/2022 16:52:37] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 16:52:37, 172.17.0.1 - - [01/Nov/2022 16:52:37] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:49:11/01/2022, 16:52:41, SELECT * FROM posts
+DEBUG:app:51:11/01/2022, 16:52:41, Articles "2020 CNCF Annual Report,KubeCon + CloudNativeCon 2021,Kubernetes v1.20 Release Notes,CNCF Cloud Native Interactive Landscape,CNCF Cloud Native Definition v1.0,Kubernetes Certification" fetched from database!
+DEBUG:app:58:11/01/2022, 16:52:41, index function - SQLite DB connection is closed
+INFO:werkzeug:225:11/01/2022, 16:52:41, 172.17.0.1 - - [01/Nov/2022 16:52:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 16:52:41, 172.17.0.1 - - [01/Nov/2022 16:52:41] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:33:11/01/2022, 16:52:43, SELECT * FROM posts WHERE id = 2
+DEBUG:app:41:11/01/2022, 16:52:43, get_post function - SQLite DB connection is closed
+INFO:app:72:11/01/2022, 16:52:43, Article "KubeCon + CloudNativeCon 2021" retrieved!
+INFO:werkzeug:225:11/01/2022, 16:52:43, 172.17.0.1 - - [01/Nov/2022 16:52:43] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 16:52:43, 172.17.0.1 - - [01/Nov/2022 16:52:43] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:49:11/01/2022, 16:52:45, SELECT * FROM posts
+DEBUG:app:51:11/01/2022, 16:52:45, Articles "2020 CNCF Annual Report,KubeCon + CloudNativeCon 2021,Kubernetes v1.20 Release Notes,CNCF Cloud Native Interactive Landscape,CNCF Cloud Native Definition v1.0,Kubernetes Certification" fetched from database!
+DEBUG:app:58:11/01/2022, 16:52:45, index function - SQLite DB connection is closed
+INFO:werkzeug:225:11/01/2022, 16:52:45, 172.17.0.1 - - [01/Nov/2022 16:52:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 16:52:45, 172.17.0.1 - - [01/Nov/2022 16:52:45] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:79:11/01/2022, 16:52:52, The "About Us" page is retrieved
+INFO:werkzeug:225:11/01/2022, 16:52:52, 172.17.0.1 - - [01/Nov/2022 16:52:52] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 16:52:52, 172.17.0.1 - - [01/Nov/2022 16:52:52] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:49:11/01/2022, 16:52:55, SELECT * FROM posts
+DEBUG:app:51:11/01/2022, 16:52:55, Articles "2020 CNCF Annual Report,KubeCon + CloudNativeCon 2021,Kubernetes v1.20 Release Notes,CNCF Cloud Native Interactive Landscape,CNCF Cloud Native Definition v1.0,Kubernetes Certification" fetched from database!
+DEBUG:app:58:11/01/2022, 16:52:55, index function - SQLite DB connection is closed
+INFO:werkzeug:225:11/01/2022, 16:52:55, 172.17.0.1 - - [01/Nov/2022 16:52:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 16:52:55, 172.17.0.1 - - [01/Nov/2022 16:52:55] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:130:11/01/2022, 16:53:18, SELECT count(id) FROM posts
+DEBUG:app:136:11/01/2022, 16:53:18, metrics check call with response :
+DEBUG:app:146:11/01/2022, 16:53:18, metrics function - SQLite DB connection is closes
+INFO:werkzeug:225:11/01/2022, 16:53:18, 172.17.0.1 - - [01/Nov/2022 16:53:18] "GET /metrics HTTP/1.1" 200 -
+INFO:app:116:11/01/2022, 16:56:42, Health check call with response: {'result': 'OK - healthy'}
+INFO:werkzeug:225:11/01/2022, 16:56:42, 172.17.0.1 - - [01/Nov/2022 16:56:42] "GET /healthz HTTP/1.1" 200 -
+INFO:app:49:11/01/2022, 16:57:25, SELECT * FROM posts
+DEBUG:app:51:11/01/2022, 16:57:25, Articles "2020 CNCF Annual Report,KubeCon + CloudNativeCon 2021,Kubernetes v1.20 Release Notes,CNCF Cloud Native Interactive Landscape,CNCF Cloud Native Definition v1.0,Kubernetes Certification" fetched from database!
+DEBUG:app:58:11/01/2022, 16:57:25, index function - SQLite DB connection is closed
+INFO:werkzeug:225:11/01/2022, 16:57:25, 172.17.0.1 - - [01/Nov/2022 16:57:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 16:57:25, 172.17.0.1 - - [01/Nov/2022 16:57:25] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:225:11/01/2022, 16:58:36, 172.17.0.1 - - [01/Nov/2022 16:58:36] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 16:58:36, 172.17.0.1 - - [01/Nov/2022 16:58:36] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:96:11/01/2022, 17:00:20, BEGIN
+INFO:app:96:11/01/2022, 17:00:20, INSERT INTO posts (title, content) VALUES ('Python', 'Python is a easiest language to learn for newbies')
+INFO:app:99:11/01/2022, 17:00:20, COMMIT
+INFO:app:101:11/01/2022, 17:00:20, New Article "Python" created!
+DEBUG:app:106:11/01/2022, 17:00:20, create function - SQLite DB connection is closed
+INFO:werkzeug:225:11/01/2022, 17:00:20, 172.17.0.1 - - [01/Nov/2022 17:00:20] "POST /create HTTP/1.1" 302 -
+INFO:app:49:11/01/2022, 17:00:20, SELECT * FROM posts
+DEBUG:app:51:11/01/2022, 17:00:20, Articles "2020 CNCF Annual Report,KubeCon + CloudNativeCon 2021,Kubernetes v1.20 Release Notes,CNCF Cloud Native Interactive Landscape,CNCF Cloud Native Definition v1.0,Kubernetes Certification,Python" fetched from database!
+DEBUG:app:58:11/01/2022, 17:00:20, index function - SQLite DB connection is closed
+INFO:werkzeug:225:11/01/2022, 17:00:20, 172.17.0.1 - - [01/Nov/2022 17:00:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 17:00:20, 172.17.0.1 - - [01/Nov/2022 17:00:20] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:33:11/01/2022, 17:00:29, SELECT * FROM posts WHERE id = 7
+DEBUG:app:41:11/01/2022, 17:00:29, get_post function - SQLite DB connection is closed
+INFO:app:72:11/01/2022, 17:00:29, Article "Python" retrieved!
+INFO:werkzeug:225:11/01/2022, 17:00:29, 172.17.0.1 - - [01/Nov/2022 17:00:29] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:225:11/01/2022, 17:00:29, 172.17.0.1 - - [01/Nov/2022 17:00:29] "GET /static/css/main.css HTTP/1.1" 304 -
