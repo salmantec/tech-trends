@@ -162,7 +162,7 @@ def setup_logger():
         handlers=handlers,
     )
 
-# start the app on port 3111
+# start the application on port 3111
 if __name__ == "__main__":
     """Start the app on port 3111"""
     setup_logger()
